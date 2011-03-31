@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Build</key>
+	<dict>
+		<key>SDK version</key>
+		<string>4.0</string>
+	</dict>
+	<key>Component</key>
+	<dict>
+		<key>Name</key>
+		<string>FileSyncComponent</string>
+		<key>Release date</key>
+		<date>2010-11-10T19:45:54Z</date>
+		<key>Version</key>
+		<string>1.0.0.0</string>
+		<key>Dependency</key>
+		<array>
+			<dict>
+				<key>Name</key>
+				<string>json-framework</string>
+				<key>Version</key>
+				<string>1.0.0</string>
+			</dict>
+			<dict>
+				<key>Name</key>
+				<string>ASIHTTPRequest</string>
+				<key>Version</key>
+				<string>v1.7-56 2010-08-30</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

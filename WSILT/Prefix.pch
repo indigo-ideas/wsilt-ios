@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'IndigoProject' target in the 'IndigoProject' project
+//
+
+#import <Availability.h>
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Constants.h"
