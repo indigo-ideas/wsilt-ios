@@ -92,7 +92,7 @@
     for (NSDictionary*item in tempVenues) {
         NSMutableDictionary *venue = [[NSMutableDictionary alloc] init];
         
-        NSString *name = [item objectForKey:@"title"];
+        NSString *name = [item objectForKey:@"name"];
         if (name) {
             [venue setObject:name forKey:@"name"];
         }

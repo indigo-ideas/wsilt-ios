@@ -7,10 +7,27 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FoursquareVenueSearch.h"
+#import "LoadingView.h"
 
-
-@interface HomeController : UIViewController {
+@interface HomeController : UIViewController <FoursquareVenueSearchDelegate, CLLocationManagerDelegate, LoadingViewDelegate, UIAlertViewDelegate> {
     
+    CLLocationManager *_locationManager;
+    CLLocation *_currentLocation;
+    FoursquareVenueSearch *_foursquare;
+    LoadingView *_loadingView;
+    
+    BOOL _didFindLocation;
+    BOOL _isSearchCancelled;
+
 }
+
+-(void) setupElements;
+
+-(void) buttonSearchTapped;
+-(void) didFindVenue: (NSDictionary *) venue;
+
+-(int) randomIntBetween:(int) smallNumber andBigNumber:(int) bigNumber;
+
 
 @end

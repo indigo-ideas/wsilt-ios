@@ -11,7 +11,7 @@
 
 
 @interface HomeController_iPad : HomeController {
-    
+    UILabel *_venueNameLabel;
 }
 
 @end
