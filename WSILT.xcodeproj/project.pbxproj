@@ -50,6 +50,9 @@
 		E2DE0623134124BE0060DE62 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DE0622134124BE0060DE62 /* MediaPlayer.framework */; };
 		E2DE0625134124D00060DE62 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DE0624134124D00060DE62 /* libz.dylib */; };
 		E2DE0627134124E20060DE62 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2DE0626134124E20060DE62 /* EventKit.framework */; };
+		E2F18B04134A97F5002FEB26 /* PlaceDetailController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F18B03134A97F5002FEB26 /* PlaceDetailController_iPhone.m */; };
+		E2F18B0A134A9820002FEB26 /* PlaceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F18B09134A9820002FEB26 /* PlaceDetailController.m */; };
+		E2F18B0D134A9856002FEB26 /* PlaceDetailController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F18B0C134A9856002FEB26 /* PlaceDetailController_iPad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +139,12 @@
 		E2DE0622134124BE0060DE62 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		E2DE0624134124D00060DE62 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E2DE0626134124E20060DE62 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		E2F18B02134A97F5002FEB26 /* PlaceDetailController_iPhone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceDetailController_iPhone.h; path = PlaceDetail/iPhone/PlaceDetailController_iPhone.h; sourceTree = "<group>"; };
+		E2F18B03134A97F5002FEB26 /* PlaceDetailController_iPhone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceDetailController_iPhone.m; path = PlaceDetail/iPhone/PlaceDetailController_iPhone.m; sourceTree = "<group>"; };
+		E2F18B08134A9820002FEB26 /* PlaceDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceDetailController.h; path = PlaceDetail/PlaceDetailController.h; sourceTree = "<group>"; };
+		E2F18B09134A9820002FEB26 /* PlaceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceDetailController.m; path = PlaceDetail/PlaceDetailController.m; sourceTree = "<group>"; };
+		E2F18B0B134A9856002FEB26 /* PlaceDetailController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceDetailController_iPad.h; path = PlaceDetail/iPad/PlaceDetailController_iPad.h; sourceTree = "<group>"; };
+		E2F18B0C134A9856002FEB26 /* PlaceDetailController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceDetailController_iPad.m; path = PlaceDetail/iPad/PlaceDetailController_iPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +338,7 @@
 		E2DE05DE13411BA80060DE62 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E2F18AFF134A97B4002FEB26 /* PlaceDetail */,
 				E2DE05F113411BB90060DE62 /* Home */,
 				E255C708134229BC00BAE393 /* SyncableController.h */,
 				E255C709134229BC00BAE393 /* SyncableController.m */,
@@ -400,6 +410,35 @@
 				E2DE060E13411E2D0060DE62 /* SBJsonWriter.m */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		E2F18AFF134A97B4002FEB26 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E2F18B01134A97CA002FEB26 /* iPad */,
+				E2F18B00134A97BF002FEB26 /* iPhone */,
+				E2F18B08134A9820002FEB26 /* PlaceDetailController.h */,
+				E2F18B09134A9820002FEB26 /* PlaceDetailController.m */,
+			);
+			name = PlaceDetail;
+			sourceTree = "<group>";
+		};
+		E2F18B00134A97BF002FEB26 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				E2F18B02134A97F5002FEB26 /* PlaceDetailController_iPhone.h */,
+				E2F18B03134A97F5002FEB26 /* PlaceDetailController_iPhone.m */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		E2F18B01134A97CA002FEB26 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				E2F18B0B134A9856002FEB26 /* PlaceDetailController_iPad.h */,
+				E2F18B0C134A9856002FEB26 /* PlaceDetailController_iPad.m */,
+			);
+			name = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +532,9 @@
 				E255C728134293A700BAE393 /* UIImageExtras.m in Sources */,
 				E255C729134293A700BAE393 /* UILabel+CharLimit.m in Sources */,
 				E224981213437E5500C98A56 /* AppDelegate.m in Sources */,
+				E2F18B04134A97F5002FEB26 /* PlaceDetailController_iPhone.m in Sources */,
+				E2F18B0A134A9820002FEB26 /* PlaceDetailController.m in Sources */,
+				E2F18B0D134A9856002FEB26 /* PlaceDetailController_iPad.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

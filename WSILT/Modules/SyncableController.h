@@ -3,7 +3,7 @@
 //  IndigoProject
 //
 //  Created by Felipe Sabino on 3/29/11.
-//  Copyright 2011 USP. All rights reserved.
+//  Copyright 2011 I.ndigo. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
