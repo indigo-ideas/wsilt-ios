@@ -12,7 +12,6 @@
 
 //#define LOGDEVICEFONTS
 
-
 @implementation AppDelegate
 
 @synthesize window=_window;
@@ -40,23 +39,75 @@
 	
 #endif
     
+#ifndef DISABLE_GOOGLE_ANALYTICS
     
+    [[GANTracker sharedTracker] startTrackerWithAccountID:GOOGLE_ANALYTIC_KEY
+                                           dispatchPeriod:10
+                                                 delegate:nil];
+	NSString *bundleVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey];
+
+    
+#endif
+    
+
+    NSError *error;
+
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 	{
+        
+#ifndef DISABLE_GOOGLE_ANALYTICS
+      
+        if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
+                                                             name:@"iPad"
+                                                            value:bundleVersion
+                                                        withError:&error]) {
+            NSLog(@"error in google analytics setCustomVariableAtIndex");
+        }
+        
+        
+        if (![[GANTracker sharedTracker] trackEvent:@"Application iPad"
+                                             action:@"Launch iPad"
+                                              label:@"iPad App Launched"
+                                              value:999
+                                          withError:&error]) {
+            NSLog(@"error in trackEvent");
+        }
+        
+#endif
+        
 		HomeController_iPhone *homeController = [[HomeController_iPhone alloc] init];
 		root = [[UINavigationController alloc] initWithRootViewController:homeController];
         [homeController release];
 		[_window addSubview:root.view];
         
-    }else {
+    } else {
+        
+#ifndef DISABLE_GOOGLE_ANALYTICS
+        
+        if (![[GANTracker sharedTracker] setCustomVariableAtIndex:1
+                                                             name:@"iPhone"
+                                                            value:bundleVersion
+                                                        withError:&error]) {
+            NSLog(@"error in google analytics setCustomVariableAtIndex");
+        }
+        
+        if (![[GANTracker sharedTracker] trackEvent:@"Application iPhone"
+                                             action:@"Launch iPhone"
+                                              label:@"iPhone App Launched"
+                                              value:999
+                                          withError:&error]) {
+            NSLog(@"error in trackEvent");
+        }
+        
+#endif
+        
         HomeController_iPad *homeController = [[HomeController_iPad alloc] init];
         root = [[UINavigationController alloc] initWithRootViewController:homeController];
         [homeController release];
         [_window addSubview:root.view];
     }
 
-    
     
     [self.window makeKeyAndVisible];
     return YES;

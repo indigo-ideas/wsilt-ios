@@ -13,3 +13,10 @@
 #define SCREEN_HEIGHT() UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) ? (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 768.0 : 320.0) : (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 1024.0 : 480.0)
 
 #define SCREEN_WIDTH() UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]) ? (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 1024.0 : 480.0) : (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ? 768.0 : 320.0)
+
+
+// google analytics
+
+//#define DISABLE_GOOGLE_ANALYTICS
+#import "GANTracker.h"
+#define GOOGLE_ANALYTIC_KEY @"UA-22516489-1"

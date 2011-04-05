@@ -91,6 +91,17 @@
     
     [super loadView];
     
+    
+#ifdef DISABLE_GOOGLE_ANALYTICS
+
+    if (![[GANTracker sharedTracker] trackPageview:@"/home"
+                                         withError:&error]) {
+        NSLog(@"error in trackPageview");
+    }
+
+    
+#endif
+    
     self.view.backgroundColor = [UIColor clearColor];
     
     [self setupElements];

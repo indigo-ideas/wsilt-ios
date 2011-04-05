@@ -11,4 +11,22 @@
 
 @implementation PlaceDetailController
 
+-(void)loadView {
+    
+    [super loadView];
+    
+    
+#ifdef DISABLE_GOOGLE_ANALYTICS
+    
+    if (![[GANTracker sharedTracker] trackPageview:@"/place_detail"
+                                         withError:&error]) {
+        NSLog(@"error in trackPageview");
+    }
+    
+    
+#endif    
+    
+    
+}
+
 @end

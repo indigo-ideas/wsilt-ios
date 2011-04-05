@@ -53,6 +53,8 @@
 		E2F18B04134A97F5002FEB26 /* PlaceDetailController_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F18B03134A97F5002FEB26 /* PlaceDetailController_iPhone.m */; };
 		E2F18B0A134A9820002FEB26 /* PlaceDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F18B09134A9820002FEB26 /* PlaceDetailController.m */; };
 		E2F18B0D134A9856002FEB26 /* PlaceDetailController_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F18B0C134A9856002FEB26 /* PlaceDetailController_iPad.m */; };
+		E2F18B19134A9AED002FEB26 /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F18B18134A9AED002FEB26 /* libGoogleAnalytics.a */; };
+		E2F18B2D134A9F52002FEB26 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F18B2C134A9F52002FEB26 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +147,9 @@
 		E2F18B09134A9820002FEB26 /* PlaceDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceDetailController.m; path = PlaceDetail/PlaceDetailController.m; sourceTree = "<group>"; };
 		E2F18B0B134A9856002FEB26 /* PlaceDetailController_iPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceDetailController_iPad.h; path = PlaceDetail/iPad/PlaceDetailController_iPad.h; sourceTree = "<group>"; };
 		E2F18B0C134A9856002FEB26 /* PlaceDetailController_iPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceDetailController_iPad.m; path = PlaceDetail/iPad/PlaceDetailController_iPad.m; sourceTree = "<group>"; };
+		E2F18B17134A9AED002FEB26 /* GANTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GANTracker.h; sourceTree = "<group>"; };
+		E2F18B18134A9AED002FEB26 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		E2F18B2C134A9F52002FEB26 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = /usr/lib/libsqlite3.0.dylib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2F18B2D134A9F52002FEB26 /* libsqlite3.0.dylib in Frameworks */,
 				E255C7071342243200BAE393 /* libxml2.dylib in Frameworks */,
 				E2DE0621134124A80060DE62 /* QuartzCore.framework in Frameworks */,
 				E2DE0582134108AA0060DE62 /* UIKit.framework in Frameworks */,
@@ -164,6 +170,7 @@
 				E2DE061F134122C40060DE62 /* SystemConfiguration.framework in Frameworks */,
 				E2DE0627134124E20060DE62 /* EventKit.framework in Frameworks */,
 				E236FD021344243F0056582F /* CoreLocation.framework in Frameworks */,
+				E2F18B19134A9AED002FEB26 /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +213,7 @@
 				E236FD011344243F0056582F /* CoreLocation.framework */,
 				E2DE0624134124D00060DE62 /* libz.dylib */,
 				E255C7061342243200BAE393 /* libxml2.dylib */,
+				E2F18B2C134A9F52002FEB26 /* libsqlite3.0.dylib */,
 				E2DE0626134124E20060DE62 /* EventKit.framework */,
 				E2DE0622134124BE0060DE62 /* MediaPlayer.framework */,
 				E2DE0620134124A70060DE62 /* QuartzCore.framework */,
@@ -248,6 +256,7 @@
 		E2DE05B013411BA80060DE62 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				E2F18B16134A9ACA002FEB26 /* GoogleAnalytics */,
 				E2DE060113411E2D0060DE62 /* JSON */,
 				E2DE05FD13411D680060DE62 /* SPSimplePersisterComponent */,
 				E2DE05B113411BA80060DE62 /* FileSyncComponent */,
@@ -441,6 +450,15 @@
 			name = iPad;
 			sourceTree = "<group>";
 		};
+		E2F18B16134A9ACA002FEB26 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				E2F18B17134A9AED002FEB26 /* GANTracker.h */,
+				E2F18B18134A9AED002FEB26 /* libGoogleAnalytics.a */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -595,6 +613,10 @@
 				GCC_PREFIX_HEADER = WSILT/Prefix.pch;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = WSILT/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/WSILT/Components/GoogleAnalytics\"",
+				);
 				PRODUCT_NAME = WSILT;
 				WRAPPER_EXTENSION = app;
 			};
@@ -609,6 +631,10 @@
 				GCC_PREFIX_HEADER = WSILT/Prefix.pch;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = WSILT/Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/WSILT/Components/GoogleAnalytics\"",
+				);
 				PRODUCT_NAME = WSILT;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
