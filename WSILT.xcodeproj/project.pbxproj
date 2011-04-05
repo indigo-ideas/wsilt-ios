@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E224981213437E5500C98A56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E224981113437E5500C98A56 /* AppDelegate.m */; };
-		E236FD00134423950056582F /* FoursquareVenueSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = E236FCFF134423950056582F /* FoursquareVenueSearch.m */; };
 		E236FD021344243F0056582F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E236FD011344243F0056582F /* CoreLocation.framework */; };
 		E255C7071342243200BAE393 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E255C7061342243200BAE393 /* libxml2.dylib */; };
 		E255C70A134229BD00BAE393 /* SyncableController.m in Sources */ = {isa = PBXBuildFile; fileRef = E255C709134229BC00BAE393 /* SyncableController.m */; };
@@ -56,8 +55,6 @@
 /* Begin PBXFileReference section */
 		E224981013437E5500C98A56 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E224981113437E5500C98A56 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E236FCFE134423950056582F /* FoursquareVenueSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoursquareVenueSearch.h; sourceTree = "<group>"; };
-		E236FCFF134423950056582F /* FoursquareVenueSearch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoursquareVenueSearch.m; sourceTree = "<group>"; };
 		E236FD011344243F0056582F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E255C7061342243200BAE393 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		E255C708134229BC00BAE393 /* SyncableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SyncableController.h; sourceTree = "<group>"; };
@@ -164,15 +161,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E236FCFC134423030056582F /* FoursquareVenueComponent */ = {
-			isa = PBXGroup;
-			children = (
-				E236FCFE134423950056582F /* FoursquareVenueSearch.h */,
-				E236FCFF134423950056582F /* FoursquareVenueSearch.m */,
-			);
-			path = FoursquareVenueComponent;
-			sourceTree = "<group>";
-		};
 		E255C714134292CA00BAE393 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,7 +239,6 @@
 		E2DE05B013411BA80060DE62 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E236FCFC134423030056582F /* FoursquareVenueComponent */,
 				E2DE060113411E2D0060DE62 /* JSON */,
 				E2DE05FD13411D680060DE62 /* SPSimplePersisterComponent */,
 				E2DE05B113411BA80060DE62 /* FileSyncComponent */,
@@ -506,7 +493,6 @@
 				E255C728134293A700BAE393 /* UIImageExtras.m in Sources */,
 				E255C729134293A700BAE393 /* UILabel+CharLimit.m in Sources */,
 				E224981213437E5500C98A56 /* AppDelegate.m in Sources */,
-				E236FD00134423950056582F /* FoursquareVenueSearch.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

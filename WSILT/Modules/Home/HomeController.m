@@ -29,7 +29,7 @@
     [UIView commitAnimations];
     
     if (_didFindLocation) {
-        [_foursquare searchVenuesForLocation:_currentLocation];
+        //TODO: load venues
     } else {
         
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not get your current position" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil]; //TODO: load alert text from resources
@@ -83,27 +83,6 @@
 }
 
 
-#pragma -
-#pragma FoursquareVenueSearchDelegate
-
--(void)foursquareVenueSearch:(FoursquareVenueSearch *)sender ErrorWhileFindingVenues:(NSError *)error {
-    
-    NSLog(@"%@", error);
-    
-}
-
--(void)foursquareVenueSearch:(FoursquareVenueSearch *)sender DidFindVenues:(NSArray *)venues {
-    
-    int venueIndex = [self randomIntBetween:0 andBigNumber:[venues count]];
-    
-    NSDictionary *venue = [venues objectAtIndex:venueIndex];
-    
-    [self didFindVenue:venue];
-
-    
-}
-
-
 #pragma mark - View lifecycle
 
 
@@ -121,9 +100,6 @@
     [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     [_locationManager startUpdatingLocation];
     
-    _foursquare = [[FoursquareVenueSearch alloc] init];
-    _foursquare.delegate = self;
-
     _loadingView = [[LoadingView alloc] init];
     _loadingView.delegate = self;
     [_loadingView setText:@"Loading places"]; //TODO: get from localized resources
@@ -164,7 +140,6 @@
     [_locationManager release];
     [_currentLocation release];
     [_loadingView release];
-    [_foursquare release];
     
     [super dealloc];
 }

@@ -21,6 +21,9 @@
 {
     self.window =  [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
+    
+    
+    
 #ifdef LOGDEVICEFONTS
 	
 	//	Logs al available fonts in system

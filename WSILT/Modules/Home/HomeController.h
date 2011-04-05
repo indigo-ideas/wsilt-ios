@@ -7,14 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FoursquareVenueSearch.h"
 #import "LoadingView.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface HomeController : UIViewController <FoursquareVenueSearchDelegate, CLLocationManagerDelegate, LoadingViewDelegate, UIAlertViewDelegate> {
+@interface HomeController : UIViewController <CLLocationManagerDelegate, LoadingViewDelegate, UIAlertViewDelegate> {
     
     CLLocationManager *_locationManager;
     CLLocation *_currentLocation;
-    FoursquareVenueSearch *_foursquare;
     LoadingView *_loadingView;
     
     BOOL _didFindLocation;
