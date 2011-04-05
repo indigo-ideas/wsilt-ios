@@ -30,7 +30,8 @@
     
     UILabel *label = [[UILabel alloc] init];
     label.frame = rect;
-    label.text = @"iPhone label!";
+    //label.text = @"iPhone label!";
+    label.text = NSLocalizedString(@"Validate", @"Testing the multi-language");
     label.font = [UIFont systemFontOfSize:14.0];
     label.textColor = [UIColor redColor];
     
