@@ -14,4 +14,6 @@
     
 }
 
+-(void)btnQuestionTapped: (UIButton *) sender;
+
 @end

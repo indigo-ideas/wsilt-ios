@@ -12,6 +12,7 @@
 		48E92CBD134AABEC00AF49AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48E92CBB134AABEC00AF49AF /* InfoPlist.strings */; };
 		48E92CC0134AABF300AF49AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48E92CBB134AABEC00AF49AF /* InfoPlist.strings */; };
 		48E92CCA134AACCA00AF49AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48E92CBB134AABEC00AF49AF /* InfoPlist.strings */; };
+		48FF883F134D394600CE9B52 /* interrogacao.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 48FF883E134D394600CE9B52 /* interrogacao.jpg */; };
 		E224981213437E5500C98A56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E224981113437E5500C98A56 /* AppDelegate.m */; };
 		E236FD021344243F0056582F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E236FD011344243F0056582F /* CoreLocation.framework */; };
 		E255C7071342243200BAE393 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E255C7061342243200BAE393 /* libxml2.dylib */; };
@@ -69,6 +70,7 @@
 		48E92CBF134AABF300AF49AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = WSILT/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		48E92CC9134AACCA00AF49AF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = WSILT/es.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		48E92CCC134AACD300AF49AF /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = WSILT/es.lproj/Localizable.strings; sourceTree = SOURCE_ROOT; };
+		48FF883E134D394600CE9B52 /* interrogacao.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = interrogacao.jpg; sourceTree = SOURCE_ROOT; };
 		E224981013437E5500C98A56 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E224981113437E5500C98A56 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E236FD011344243F0056582F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48FF8839134D392300CE9B52 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				48FF883E134D394600CE9B52 /* interrogacao.jpg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		E255C714134292CA00BAE393 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +379,7 @@
 		E2DE05DF13411BA80060DE62 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				48FF8839134D392300CE9B52 /* Images */,
 				48E92CBB134AABEC00AF49AF /* InfoPlist.strings */,
 				484A4E13134AAA1D00EDE2AF /* Localizable.strings */,
 			);
@@ -530,6 +541,7 @@
 				48E92CBD134AABEC00AF49AF /* InfoPlist.strings in Resources */,
 				48E92CC0134AABF300AF49AF /* InfoPlist.strings in Resources */,
 				48E92CCA134AACCA00AF49AF /* InfoPlist.strings in Resources */,
+				48FF883F134D394600CE9B52 /* interrogacao.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

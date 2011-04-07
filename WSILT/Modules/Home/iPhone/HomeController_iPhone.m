@@ -21,24 +21,36 @@
     
     [super loadView];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     CGRect rect = CGRectNull;
-    rect.size.width = 100.0;
-    rect.size.height = 30.0;
-    rect.origin.x = 100.0;
-    rect.origin.y = 100.0;
+    rect.size.width = 300.0;
+    rect.size.height = 100.0;
+    rect.origin.x = 20.0;
+    rect.origin.y = 50.0;
     
     
     UILabel *label = [[UILabel alloc] init];
     label.frame = rect;
-    //label.text = @"iPhone label!";
-    label.text = NSLocalizedString(@"Validate", @"Testing the multi-language");
-    label.font = [UIFont systemFontOfSize:14.0];
+    label.text = NSLocalizedString(@"homeQuestion", @"Testing the multi-language");
+    label.font = [UIFont systemFontOfSize:21.0];
     label.textColor = [UIColor redColor];
     
     [self.view  addSubview:label];
     
     [label release];
+    
+    UIButton *btnWhere = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnWhere setImage:[UIImage imageNamed: @"interrogacao.jpg"] forState:UIControlStateNormal];
+    [btnWhere addTarget:self action:@selector(btnQuestionTapped:) forControlEvents:UIControlEventTouchUpInside];
+    btnWhere.frame = CGRectMake(100.0, 200.0, 118.0, 120.0);
+    [self.view addSubview:btnWhere];
         
+}
+
+-(void)btnQuestionTapped: (UIButton *) sender{
+    UIAlertView *msgFeijao = [[UIAlertView alloc]  initWithTitle:NSLocalizedString(@"msgFeijaoTitle", @"Testing the multi-language") message:NSLocalizedString(@"msgFeijaoText", @"Testing the multi-language") delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK",nil];
+    [msgFeijao show];
 }
 
 
